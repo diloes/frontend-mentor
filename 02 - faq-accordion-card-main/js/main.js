@@ -6,9 +6,28 @@ let preguntaUna;
 
 function iniciarApp(){
 
-    const pregunta = document.querySelectorAll('.colocar-flecha');
-    const respuesta = document.querySelectorAll('.respuesta');
-    
+    const preguntas = document.querySelectorAll('.colocar-flecha');
+    const respuestas = document.querySelectorAll('.respuesta');
+
+    preguntas.forEach(pregunta => {
+        pregunta.addEventListener('click', function(){
+            
+            resp();
+        });
+    });
+
+function resp(){
+    respuestas.forEach(respuesta => {
+        if(respuesta.classList.value === 'respuesta'){
+            respuesta.classList.add('.ocultar');
+        }else {
+            respuesta.classList.remove('.ocultar')
+        }
+        
+    });
+}
+
+/*
     for(let i=0; i < pregunta.length; i++){
         //console.log(respuesta[i].classList.value)
         pregunta[i].addEventListener('click', function(){
@@ -20,7 +39,7 @@ function iniciarApp(){
             // }
 
         });
-    }
+    }*/
 
     
 }
