@@ -11,21 +11,26 @@ function iniciarApp(){
 
     preguntas.forEach(pregunta => {
         pregunta.addEventListener('click', function(){
+
+            pregunta.parentNode.childNodes[3].classList.remove('ocultar')
+            console.log(pregunta.parentNode.childNodes);
             
-            resp();
         });
     });
 
+    /*
 function resp(){
     respuestas.forEach(respuesta => {
         if(respuesta.classList.value === 'respuesta'){
+            console.log('este es el if')
             respuesta.classList.add('.ocultar');
         }else {
+            console.log('este es el else')
             respuesta.classList.remove('.ocultar')
         }
         
     });
-}
+}*/
 
 /*
     for(let i=0; i < pregunta.length; i++){
