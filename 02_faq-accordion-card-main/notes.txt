@@ -1,0 +1,11 @@
+Accordion Funcionality
+----------------------
+
+.accordion_question: 
+ -add class 'open' when button is clicked to open, remove on close
+
+
+
+
+
+
